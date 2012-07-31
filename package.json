@@ -1,0 +1,21 @@
+{
+  "name": "keygen",
+  "version": "0.0.0",
+  "description": "url-friendly, random, unique key/token generation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devmode/node-keygen.git"
+  },
+  "keywords": [
+    "token",
+    "key",
+    "random",
+    "unique"
+  ],
+  "author": "DevMode, Inc.",
+  "license": "MIT"
+}
