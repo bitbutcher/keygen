@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "description": "url-friendly, random, unique key/token generation",
   "main": "index.js",
+  "devDependencies": {
+    "coffee-script": "1.3.3",
+    "mocha": "1.3.0",
+    "should": "1.1.0",
+    "docco": "0.3.0"
+  },
   "scripts": {
     "test": "mocha"
   },
