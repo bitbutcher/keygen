@@ -1,0 +1,29 @@
+{
+  "name": "keygen",
+  "version": "0.0.1",
+  "description": "url-friendly, random, unique key/token generation",
+  "keywords": [
+    "token",
+    "key",
+    "random",
+    "unique"
+  ],
+  "main": "bin/index.js",
+  "devDependencies": {
+    "coffee-script": "1.3.3",
+    "mocha": "1.3.0",
+    "should": "1.1.0",
+    "docco": "0.3.0"
+  },
+  "bugs": "https://github.com/devmode/node-keygen/issues", 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devmode/node-keygen.git"
+  },
+  "author": "DevMode, Inc. <oss@devmode.com> (http://devmode.com)",
+  "contributors": [
+    "Sean M. Duncan <sean@devmode.com> (http://devmode.com/who)",
+    "John E. Bailey <john@devmode.com> (http://devmode.com/who)"
+  ],
+  "license": "MIT"
+}
