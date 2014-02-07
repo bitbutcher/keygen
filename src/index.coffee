@@ -1,6 +1,10 @@
-# the 'hex' and 'url' key generators are tuned have a collision probability similar to that 
-# of MD5 at a uniqueness factor of 2 (the default) specify a uniqueness factor of 4 for a 
-# collision probabiltiy similar to that of SHA256
+###
+ * keygen
+ * https://github.com/devmode/keygen
+ * 
+ * Copyright (c) 2014 DevMode, Inc.
+ * Licensed under the MIT license.
+###
 
 gen_for = (base, alpha) ->
     (uq_factor=2) ->

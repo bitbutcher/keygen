@@ -1,6 +1,6 @@
 {
   "name": "keygen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "url-friendly, random, unique key/token generation",
   "keywords": [
     "token",
@@ -8,22 +8,33 @@
     "random",
     "unique"
   ],
-  "main": "bin/index.js",
-  "devDependencies": {
-    "coffee-script": "1.3.3",
-    "mocha": "1.3.0",
-    "should": "1.1.0",
-    "docco": "0.3.0"
-  },
-  "bugs": "https://github.com/devmode/node-keygen/issues", 
+  "homepage": "https://github.com/devmode/keygen",
+  "bugs": "https://github.com/devmode/keygen/issues", 
   "repository": {
     "type": "git",
-    "url": "https://github.com/devmode/node-keygen.git"
+    "url": "https://github.com/devmode/keygen.git"
   },
   "author": "DevMode, Inc. <oss@devmode.com> (http://devmode.com)",
   "contributors": [
     "Sean M. Duncan <sean@devmode.com> (http://devmode.com/who)",
     "John E. Bailey <john@devmode.com> (http://devmode.com/who)"
   ],
-  "license": "MIT"
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/devmode/keygen/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 0.8.x",
+    "npm": ">= 1.1.x"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.7.1",
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-coffee": "~0.9.0"
+  }
 }
