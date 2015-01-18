@@ -1,6 +1,6 @@
 {
   "name": "keygen",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "url-friendly, random, unique key/token generation",
   "keywords": [
     "token",
@@ -8,33 +8,32 @@
     "random",
     "unique"
   ],
-  "homepage": "https://github.com/devmode/keygen",
-  "bugs": "https://github.com/devmode/keygen/issues", 
+  "homepage": "https://github.com/bitbutcher/keygen",
+  "bugs": "https://github.com/bitbutcher/keygen/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devmode/keygen.git"
+    "url": "https://github.com/bitbutcher/keygen.git"
   },
-  "author": "DevMode, Inc. <oss@devmode.com> (http://devmode.com)",
+  "author": "Sean M. Duncan <bitbutcher@gmail.com>",
   "contributors": [
-    "Sean M. Duncan <sean@devmode.com> (http://devmode.com/who)",
     "John E. Bailey <john@devmode.com> (http://devmode.com/who)"
   ],
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/devmode/keygen/blob/master/LICENSE-MIT"
+      "url": "https://github.com/bitbutcher/keygen/blob/master/LICENSE-MIT"
     }
   ],
   "main": "lib/index.js",
   "engines": {
-    "node": ">= 0.8.x",
-    "npm": ">= 1.1.x"
+    "node": "^0.10.35",
+    "npm": "^2.2.0"
   },
   "devDependencies": {
-    "coffee-script": "~1.7.1",
-    "grunt": "~0.4.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-coffee": "~0.9.0"
+    "coffee-script": "^1.8.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-coffee": "^0.12.0"
   }
 }
