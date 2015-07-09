@@ -1,27 +1,31 @@
 ###
  * keygen
  * https://github.com/devmode/keygen
- * 
+ *
  * Copyright (c) 2014 DevMode, Inc.
  * Licensed under the MIT license.
 ###
 
-gen_for = (base, alpha) ->
-    (uq_factor=2) ->
-      (alpha.charAt Math.floor(Math.random() * alpha.length) for [1..base * uq_factor]).join ''
+crypto = require 'crypto'
 
-module.exports = 
+gen_for = (alpha) ->
+  alpha = (alpha for it in [0..256 / alpha.length + 1]).join('').split('')
+  (length=22) ->
+    try
+      (alpha[byte] for byte in crypto.randomBytes(length)).join ''
+    catch ex
+      (alpha[Math.floor Math.random() * alpha.length] for [1..length]).join ''
+
+module.exports =
 
   gen_for: gen_for
 
-  hex: gen_for 16, '0123456789abcdef'
+  hex: gen_for '0123456789abcdef'
 
-  url: gen_for 11, '23456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
+  url: gen_for '23456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
 
-  small: 1
+  small: 11
 
-  medium: 2
+  medium: 22
 
-  large: 4
-
-
+  large: 44
