@@ -3,11 +3,12 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-mocha-test'
 
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     clean:
-      dist: [ 'dist' ] 
+      dist: [ 'dist' ]
     copy:
       dist:
         files: [
@@ -22,6 +23,29 @@ module.exports = (grunt) ->
         src: '**/*.coffee'
         dest: 'dist/lib'
         ext: '.js'
+    mochaTest:
+      test:
+        options:
+          require: [
+            'coffee-script/register'
+          ]
+          timeout: 30000
+        src: [ 'test/**/*.coffee' ]
+      coverage:
+        options:
+          reporter: 'html-cov'
+          quiet: true
+          captureFile: 'coverage.html'
+          require: [
+            'coffee-script/register'
+            'test/coverage.coffee'
+          ]
+          timeout: 30000
+        src: [ 'test/**/*.coffee' ]
+
+  grunt.registerTask 'test', [ 'mochaTest:test' ]
+
+  grunt.registerTask 'coverage', [ 'mochaTest:coverage' ]
 
   grunt.registerTask 'dist', [ 'copy', 'coffee' ]
 
