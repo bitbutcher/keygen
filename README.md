@@ -12,7 +12,7 @@ npm install keygen --save
 
 ## Overview
 
-Keygen can be used to generate url-friendly or hexidecimal keys.  The url-friendly variety should be favored where possible since they are shorter but represent a significantly larger keyspace.
+Keygen can be used to generate url-friendly or hexadecimal keys.  The url-friendly variety should be favored where possible since they are shorter but represent a significantly larger keyspace.
 
 ## Examples
 
