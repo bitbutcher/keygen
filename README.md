@@ -12,7 +12,7 @@ npm install keygen --save
 
 ## Overview
 
-Keygen can be used to generate url-friendly or hexidecimal keys.  The url-friendly variety should be favored where possible since they are shorter but represent a significantly larger keyspace.
+Keygen can be used to generate url-friendly or hexadecimal keys.  The url-friendly variety should be favored where possible since they are shorter but represent a significantly larger keyspace.
 
 ## Examples
 
@@ -22,38 +22,38 @@ URL Friendly Keys:
 var keygen = require('keygen');
 
 // generate a small url-friendly key
-keygen.url(keygen.small);  //-> 'ob2sdNPT6oy'
+keygen.url(keygen.small);  //-> 'u3WZbDyN57J'
 
 // generate a medium url-friendly key
-keygen.url(keygen.medium);  //-> 'bmGZK8pH7zTCVLJZDZPsYS'
+keygen.url(keygen.medium);  //-> '5yQZwZsLCaW9W3kmKxx7Ac'
 // or
-keygen.url();  //-> 'zQSu6JET5kRbViW7Mz8Z7f'
+keygen.url();  //-> '4wUtvcP5izgTRwV7GPZp9f'
 
 // generate a large url-friendly key
-keygen.url(keygen.large);  //-> '8DtZ4nsKJNiGVHTdqtLFHgLsYoktWsUtfazpjzonFUam'
+keygen.url(keygen.large);  //-> 'zj6BYUikZeDFwrj8yn9xRdFVXQbKPTQWDs8fqq9fRkqj'
 
-// generate a huge url-friendly key via a custom uniqueness factor
-keygen.url(11);  //-> '86ZdCFcM7TLw45rn2Hi2tN5JsKYne6Uk4XAQ76b5YWwfUtZYzfKxnv8t96u9funiTHGHzKco7JN34umyyjUvGZkBLNBQSEtj5VSkaDYXfDwQ2CmtYCmdGn6ke'
+// generate a huge url-friendly key via a custom length
+keygen.url(13);  //-> 'f3dBLmgNCtK8h'
 ```
 
-Hexidecimal Keys:
+Hexadecimal Keys:
 
 ```js
 var keygen = require('keygen');
 
 // generate a small hex key
-keygen.hex(keygen.small);  //-> '926e8a8970835c96'
+keygen.hex(keygen.small);  //-> 'e9732d18888'
 
 // generate a medium hex key
-keygen.hex(keygen.medium);  //-> '871136e6d634815ac8ba57af1761a0bc'
+keygen.hex(keygen.medium);  //-> '910886cd435e93eef7e22e'
 // or
-keygen.hex();  //-> '13f8109d204bec06da97c9f93bd7ca5a'
+keygen.hex();  //-> '8f07d173de8786d5488e3e'
 
 // generate a large hex key
-keygen.hex(keygen.large);  //-> '40ec6f83ba22d76239a95451dc59c5ab0a3448feaecc4074365ac01bd871ba08'
+keygen.hex(keygen.large);  //-> '9c90543d255fe6f71a593f807034b5e123f26081ca73'
 
-// generate a huge hex key via a custom uniqueness factor
-keygen.hex(11);  //-> '56beed897c1b34fdd50cad3ddd2f31b7085dca88c9c49cf96a89fee76886823a002a0dc43656848a0562cf73509b9ea98bfe6ca51e042fa59c57b0a98b2ff9e63fc41117b073a6f3cf477acfe922de4f5df3de0c3665b657'
+// generate a huge hex key via a custom length
+keygen.hex(31);  //-> 'aa66c729bdf9b119c33653589d2770f'
 ```
 
 ## Contributing
