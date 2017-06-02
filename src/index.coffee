@@ -14,21 +14,26 @@ large = medium * 2
 
 gen_for = (alpha) ->
   alpha = (alpha for it in [0..256 / alpha.length + 1]).join('').split('')
-  generate = (bytes) -> (alpha[byte] for byte in bytes).join ''
-  fallback = (length) -> (alpha[Math.floor Math.random() * alpha.length] for [1..length]).join ''
+  generate = (bytes) ->
+    key = ''
+    for byte in bytes
+      key += alpha[byte]
+    key
+  sync = (length) ->
+    try
+      generate crypto.randomBytes length
+    catch ex
+      generate crypto.pseudoRandomBytes length
+  async = (length, callback) ->
+    crypto.randomBytes length, (err, bytes) ->
+      return callback generate bytes unless err?
+      crypto.pseudoRandomBytes length, (err, bytes) ->
+        callback generate bytes
+    return
   (length, callback) ->
     [ length, callback ] = [ callback, length ] if length?.constructor is Function
     length = medium unless length?
-    if callback?
-      crypto.randomBytes length, (err, bytes) ->
-        return callback fallback length if err?
-        callback generate bytes
-      return
-    else
-      try
-        generate crypto.randomBytes length
-      catch ex
-        fallback length
+    if callback? then async(length, callback) else sync(length)
 
 module.exports = {
 

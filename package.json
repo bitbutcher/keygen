@@ -1,6 +1,6 @@
 {
   "name": "keygen",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "url-friendly, random, unique key/token generation",
   "keywords": [
     "token",

@@ -25,7 +25,7 @@ describe 'keygen', ->
     after ->
       crypto.randomBytes = @random
 
-    it 'should fall back to Math.random', ->
+    it 'should fall back to a pseudorandom source', ->
       key = keygen.hex()
       assert.strictEqual 22, key.length
 
@@ -36,17 +36,17 @@ describe 'keygen', ->
 
   describe '#hex(small)', ->
 
-    it 'should generate unique ids of length 16', ->
+    it 'should generate unique ids of length 11', ->
       assertKeyGen keygen.hex, keygen.small
 
   describe '#hex(medium)', ->
 
-    it 'should generate unique ids of length 32', ->
+    it 'should generate unique ids of length 22', ->
       assertKeyGen keygen.hex, keygen.medium
 
   describe '#hex(large)', ->
 
-    it 'should generate unique ids of length 64', ->
+    it 'should generate unique ids of length 44', ->
       assertKeyGen keygen.hex, keygen.large
 
   describe '#url()', ->
