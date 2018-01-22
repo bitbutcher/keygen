@@ -1,6 +1,6 @@
 ###
  * keygen
- * https://github.com/devmode/keygen
+ * https://github.com/bitbutcher/keygen
  *
  * Copyright (c) 2015 Sean M. Duncan
  * Licensed under the MIT license.
@@ -16,8 +16,7 @@ gen_for = (alpha) ->
   alpha = (alpha for it in [0..256 / alpha.length + 1]).join('').split('')
   generate = (bytes) ->
     key = ''
-    for byte in bytes
-      key += alpha[byte]
+    key += alpha[byte] for byte in bytes
     key
   sync = (length) ->
     try
