@@ -12,6 +12,7 @@ module.exports = (grunt) ->
     copy:
       dist:
         files: [
+          { expand: true, cwd: 'src', src: 'index.d.ts', dest: 'dist/lib' }
           { expand: true, src: 'LICENSE-MIT', dest: 'dist' }
           { expand: true, src: 'package.json', dest: 'dist' }
           { expand: true, src: 'README.md', dest: 'dist' }
@@ -37,8 +38,8 @@ module.exports = (grunt) ->
           quiet: true
           captureFile: 'coverage.html'
           require: [
-            'coffee-script/register'
-            'test/coverage.coffee'
+            'coffee-script/register',
+            'coverage/blanket'
           ]
           timeout: 30000
         src: [ 'test/**/*.coffee' ]
@@ -47,7 +48,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'coverage', [ 'mochaTest:coverage' ]
 
-  grunt.registerTask 'dist', [ 'copy', 'coffee' ]
+  grunt.registerTask 'dist', [ 'coffee', 'copy' ]
 
   spawn = (cmd, cwd, args..., done) ->
     proc = grunt.util.spawn {cmd, args, opts: {cwd}}, (err) ->
