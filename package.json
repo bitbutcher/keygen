@@ -1,6 +1,6 @@
 {
   "name": "keygen",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "url-friendly, random, unique key/token generation",
   "keywords": [
     "token",
@@ -20,18 +20,20 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "engines": {
-    "node": ">=0.10.0 <6.0.0",
-    "npm": ">=2.0.0 <4.0.0"
+  "scripts": {
+    "clean": "grunt clean",
+    "dist": "grunt dist",
+    "test": "grunt test",
+    "coverage": "grunt coverage"
   },
   "devDependencies": {
-    "blanket": "^1.1.7",
-    "coffee-script": "^1.9.3",
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-coffee": "^0.12.0",
-    "grunt-contrib-copy": "^0.7.0",
-    "grunt-mocha-test": "^0.12.7",
-    "mocha": "^2.2.5"
+    "blanket": "^1.2.3",
+    "coffee-script": "^1.12.7",
+    "grunt": "^1.6.1",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-coffee": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-mocha-test": "^0.13.3",
+    "mocha": "^2.0.0"
   }
 }
